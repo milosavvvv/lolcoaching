@@ -1,12 +1,8 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+// vite.config.js
+import { defineConfig } from 'vite'
+import react from '@vitejs.plugin-react'
 
 export default defineConfig({
-  root: 'client',
-  base: '/lolcoaching/',
   plugins: [react()],
-  build: {
-    outDir: '../dist',
-    emptyOutDir: true
-  }
-});
+  base: '/lolcoaching/', // Must match your GitHub repository name exactly
+})
