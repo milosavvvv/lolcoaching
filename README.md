@@ -1,24 +1,45 @@
-# Summit Coaching — League of Legends
+# NEXUS — GitHub Pages + Stripe
 
-Professional one-page LoL coaching site with three plans and Stripe Checkout.
+A polished, responsive League of Legends-inspired coaching landing page built with plain HTML, CSS and JavaScript.
 
-## Local development
+## Why this architecture works on GitHub Pages
 
-1. Install Node.js 18+.
-2. Run `npm install`.
-3. Copy `.env.example` to `.env`.
-4. Add your Stripe secret key and three Stripe Price IDs.
-5. Set `CLIENT_URL=http://localhost:5173`.
-6. Run `npm run dev`.
+GitHub Pages is static hosting. It cannot safely run a Stripe server endpoint or store a Stripe secret key.
 
-## GitHub Pages + Stripe
+This project therefore uses **Stripe Payment Links**: each pricing button opens Stripe's hosted Checkout page. Your GitHub Pages site never receives or stores card information.
 
-GitHub Pages hosts the React frontend only. It does **not** run Node/Express, so Stripe's secret key must remain on a separate backend such as Railway.
+### Configure Stripe
 
-1. Deploy the `server/` with the root `package.json` to Railway (or another Node host).
-2. Add `STRIPE_SECRET_KEY`, `STRIPE_PRICE_STARTER`, `STRIPE_PRICE_ELITE`, `STRIPE_PRICE_PREMIUM`, and `CLIENT_URL=https://milosavvvv.github.io/lolcoaching/` to the backend.
-3. In GitHub: **Settings → Secrets and variables → Actions → Variables**, create `VITE_API_URL` with your backend URL, e.g. `https://your-app.up.railway.app`.
-4. In GitHub: **Settings → Pages → Source**, choose **GitHub Actions**.
-5. Push to `main`. The included workflow builds with Vite's `/lolcoaching/` base path and deploys `dist/` to Pages.
+1. In Stripe Dashboard, create three products/prices:
+   - Solo Queue — $19/month
+   - Climb Lab — $49/month
+   - Challenger Room — $99/month
+2. Create a Payment Link for each price.
+3. Open `index.html`.
+4. Replace:
+   - `https://buy.stripe.com/REPLACE_SOLO_QUEUE`
+   - `https://buy.stripe.com/REPLACE_CLIMB_LAB`
+   - `https://buy.stripe.com/REPLACE_CHALLENGER_ROOM`
+   with your actual Stripe Payment Links.
+5. Commit and push.
 
-Do not put `STRIPE_SECRET_KEY` in GitHub Pages, `VITE_*` variables, or frontend source code.
+## Deploy to GitHub Pages
+
+This is a no-build static site.
+
+1. Create a GitHub repository.
+2. Upload `index.html`, `styles.css`, `script.js`, and this README.
+3. In **Settings → Pages**, choose **Deploy from a branch**, then your main branch and `/ (root)`.
+4. Save.
+
+You can also use GitHub Actions if you prefer.
+
+## Important
+
+Do **not** put a Stripe secret key (`sk_live_...` / `sk_test_...`) into this repository.
+
+If you need custom Stripe Checkout Sessions, webhooks, customer accounts, license provisioning, or server-side order validation, keep the frontend on GitHub Pages and add a separate backend/serverless function (for example, a Stripe-supported server environment). Never expose the secret key in browser JavaScript.
+
+## Branding
+
+NEXUS is an independent concept and is not affiliated with or endorsed by Riot Games.

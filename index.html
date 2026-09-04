@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="NEXUS — premium League of Legends coaching and competitive improvement plans.">
+  <title>NEXUS — League of Legends Coaching</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Nexus home">
+      <span class="brand-mark">N</span>
+      <span>NEXUS</span>
+    </a>
+    <nav>
+      <a href="#features">Why Nexus</a>
+      <a href="#pricing">Plans</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="header-cta" href="#pricing">Choose a plan <span>↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot"></span> BUILT FOR THE GRIND</div>
+        <h1>Turn every game<br><em>into progress.</em></h1>
+        <p class="hero-text">Structured League of Legends coaching, VOD review, and actionable game plans designed to help you climb with intent.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#pricing">View plans <span>→</span></a>
+          <a class="button ghost" href="#features">See what's included</a>
+        </div>
+        <div class="trust-row">
+          <div><div class="stars">★★★★★</div><span>Player-focused coaching</span></div>
+          <div class="divider"></div>
+          <div><strong>3</strong><span>simple plans</span></div>
+          <div class="divider"></div>
+          <div><strong>24/7</strong><span>access to resources</span></div>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orb orb-a"></div>
+        <div class="orb orb-b"></div>
+        <div class="grid"></div>
+        <div class="rank-card">
+          <div class="rank-top"><span>RANKED SESSION</span><span class="green">LIVE</span></div>
+          <div class="rank-icon">✦</div>
+          <div class="rank-name">NEXT LEVEL</div>
+          <div class="rank-bar"><span></span></div>
+          <div class="rank-meta"><span>FOCUS</span><b>MACRO</b></div>
+        </div>
+        <div class="floating-chip chip-one">↗ +LP</div>
+        <div class="floating-chip chip-two">VOD REVIEW</div>
+      </div>
+    </section>
+
+    <section id="features" class="section features">
+      <div class="section-heading">
+        <div class="eyebrow">THE NEXUS METHOD</div>
+        <h2>Less noise. More <em>clarity.</em></h2>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="feature-number">01</span>
+          <div class="feature-icon">◈</div>
+          <h3>VOD Review</h3>
+          <p>Identify the few decisions that matter most, with concise notes you can apply in your next queue.</p>
+        </article>
+        <article class="feature-card featured-feature">
+          <span class="feature-number">02</span>
+          <div class="feature-icon">⌁</div>
+          <h3>Game Plans</h3>
+          <p>Turn your champion pool and playstyle into repeatable pre-game and in-game priorities.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-number">03</span>
+          <div class="feature-icon">↗</div>
+          <h3>Progress Tracking</h3>
+          <p>Track your goals, recurring mistakes, and wins so improvement feels measurable instead of random.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="pricing" class="section pricing">
+      <div class="section-heading centered">
+        <div class="eyebrow">CHOOSE YOUR LOADOUT</div>
+        <h2>Three ways to <em>level up.</em></h2>
+        <p>Secure checkout is handled by Stripe. Cancel recurring plans through your Stripe customer portal.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <article class="price-card">
+          <div class="price-top"><span class="plan-tag">STARTER</span></div>
+          <h3>Solo Queue</h3>
+          <p class="price"><span>$</span>19<small>/mo</small></p>
+          <p class="price-description">A focused toolkit for players who want better fundamentals and a clear practice loop.</p>
+          <ul>
+            <li>Weekly improvement checklist</li>
+            <li>Champion & role fundamentals</li>
+            <li>Macro decision framework</li>
+            <li>Members-only guides</li>
+          </ul>
+          <a class="button plan-button" data-plan="solo" href="https://buy.stripe.com/REPLACE_SOLO_QUEUE" target="_blank" rel="noopener">Get Solo Queue <span>→</span></a>
+        </article>
+
+        <article class="price-card popular">
+          <div class="popular-badge">MOST POPULAR</div>
+          <div class="price-top"><span class="plan-tag">COMPETITIVE</span></div>
+          <h3>Climb Lab</h3>
+          <p class="price"><span>$</span>49<small>/mo</small></p>
+          <p class="price-description">The full improvement system with regular VOD feedback and personalized priorities.</p>
+          <ul>
+            <li>Everything in Solo Queue</li>
+            <li>2 VOD reviews / month</li>
+            <li>Personalized game plan</li>
+            <li>Monthly progress audit</li>
+            <li>Priority support</li>
+          </ul>
+          <a class="button primary plan-button" data-plan="climb" href="https://buy.stripe.com/REPLACE_CLIMB_LAB" target="_blank" rel="noopener">Enter Climb Lab <span>→</span></a>
+        </article>
+
+        <article class="price-card">
+          <div class="price-top"><span class="plan-tag">ELITE</span></div>
+          <h3>Challenger Room</h3>
+          <p class="price"><span>$</span>99<small>/mo</small></p>
+          <p class="price-description">High-touch coaching for serious players who want an accountable improvement partner.</p>
+          <ul>
+            <li>Everything in Climb Lab</li>
+            <li>Weekly VOD review</li>
+            <li>1:1 coaching session / month</li>
+            <li>Custom champion pool review</li>
+            <li>Direct coaching channel</li>
+          </ul>
+          <a class="button plan-button" data-plan="elite" href="https://buy.stripe.com/REPLACE_CHALLENGER_ROOM" target="_blank" rel="noopener">Go Elite <span>→</span></a>
+        </article>
+      </div>
+      <p class="checkout-note">🔒 Payments are processed on Stripe's secure hosted checkout. This site never handles or stores card details.</p>
+    </section>
+
+    <section class="section quote-section">
+      <div class="quote-mark">“</div>
+      <blockquote>Stop trying to play more games. Start making more of the games you already play.</blockquote>
+      <span>— THE NEXUS PRINCIPLE</span>
+    </section>
+
+    <section id="faq" class="section faq">
+      <div class="section-heading centered">
+        <div class="eyebrow">QUESTIONS</div>
+        <h2>Good to <em>know.</em></h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>How does checkout work? <span>+</span></summary>
+          <p>Choose a plan and you'll be sent to Stripe's hosted checkout page. After payment, Stripe handles the confirmation and subscription billing.</p>
+        </details>
+        <details>
+          <summary>Can I change or cancel my plan? <span>+</span></summary>
+          <p>Yes. For subscriptions, use the Stripe customer portal you provide to customers, or manage the subscription from your Stripe Dashboard.</p>
+        </details>
+        <details>
+          <summary>Does this website need a server? <span>+</span></summary>
+          <p>No for this version. It is a static HTML/CSS/JS site and can be hosted directly on GitHub Pages. Stripe Payment Links keep checkout off your site.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <a class="brand" href="#top"><span class="brand-mark">N</span><span>NEXUS</span></a>
+      <p>Independent League of Legends coaching concept. Not affiliated with or endorsed by Riot Games.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#pricing">Plans</a>
+      <a href="#faq">FAQ</a>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
