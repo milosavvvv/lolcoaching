@@ -1,11 +1,12 @@
-const { defineConfig } = require('vite');
-const react = require('@vitejs/plugin-react');
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-module.exports = defineConfig({
+export default defineConfig({
+  root: 'client',
   base: '/lolcoaching/',
   plugins: [react()],
-  server: {
-    proxy: { '/api': 'http://localhost:4242' }
-  },
-  build: { outDir: 'dist', emptyOutDir: true }
+  build: {
+    outDir: '../dist',
+    emptyOutDir: true
+  }
 });
