@@ -1,8 +1,12 @@
-// vite.config.js
 import { defineConfig } from 'vite'
 import react from '@vitejs.plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/lolcoaching/', // Must match your GitHub repository name exactly
+  root: 'client',
+  base: '/lolcoaching/',
+  build: {
+    outDir: '../dist',
+    emptyOutDir: true
+  }
 })
